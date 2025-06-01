@@ -1,103 +1,284 @@
+import InViewAnimateSection from "@/components/InViewAnimateSection";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { cj } from "@/lib/utils";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+
+const solutions = [
+  {
+    image: "/images/maze.svg",
+    heading: "Struggling with anxiety, stress, or depression?",
+  },
+  {
+    image: "/images/chat.svg",
+    heading: "Struggling with anxiety, stress, or depression?",
+  },
+  {
+    image: "/images/puzzle.svg",
+    heading: "Struggling with anxiety, stress, or depression?",
+  },
+];
+
+const features = [
+  {
+    image: "/images/hands.svg",
+    heading: "Qualified Team",
+    description: "Therapists who prioritize yourmental health.",
+  },
+  {
+    image: "/images/checklist.svg",
+    heading: "Tailored Therapy",
+    description: "We tailor sessions to your unique needs.",
+  },
+  {
+    image: "/images/circled-hands.svg",
+    heading: "Culturally Inclusive",
+    description: "Assisting you in English, Hindi, Marathi, and Malayalam.",
+  },
+  {
+    image: "/images/certificate.svg",
+    heading: "Faith-Focused Growth",
+    description: "Spiritual guidance with proven therapeutic techniques.",
+  },
+];
+
+const faqs = [
+  {
+    question: "How to Schedule a Session?",
+    content:
+      "You can schedule a session by visiting our booking page, selecting your preferred date and time, and confirming your appointment. If you need assistance, feel free to contact us.",
+  },
+  {
+    question: "Is there any Free Trial Session ?",
+    content:
+      "You can schedule a session by visiting our booking page, selecting your preferred date and time, and confirming your appointment. If you need assistance, feel free to contact us.",
+  },
+  {
+    question: "Do you do In-Person Therapy ?",
+    content:
+      "You can schedule a session by visiting our booking page, selecting your preferred date and time, and confirming your appointment. If you need assistance, feel free to contact us.",
+  },
+  {
+    question: "Counseling vs. Clinical Psychologist",
+    content:
+      "You can schedule a session by visiting our booking page, selecting your preferred date and time, and confirming your appointment. If you need assistance, feel free to contact us.",
+  },
+  {
+    question: "Is there a Free Trial Sessions?",
+    content:
+      "You can schedule a session by visiting our booking page, selecting your preferred date and time, and confirming your appointment. If you need assistance, feel free to contact us.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <InViewAnimateSection
+        id="home"
+        className="!h-full flex py-24 justify-center"
+      >
+        <div className="absolute inset-0 -z-10">
+          <Image
+            alt="background-image-1"
+            src={"/images/HeroImg.png"}
+            width={1512}
+            height={720}
+            className="h-full object-cover"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="flex flex-col items-center my-auto gap-y-6 text-accent">
+          <h1>
+            BeyondFaith, Your Journey
+            <br />
+            to Inner Strength
+          </h1>
+          <p className="font-inter text-2xl text-center font-light">
+            Rediscover your potential with therapists who guide you toward a
+            more
+            <br />
+            peaceful you—grounded in faith.
+          </p>
+          <Button variant="accent" className="w-fit">
+            Start Your Journey
+          </Button>
+        </div>
+      </InViewAnimateSection>
+      <InViewAnimateSection
+        id="services"
+        className="!h-full flex justify-center py-24 border-b border-foreground/5"
+      >
+        <div className="my-auto flex flex-col gap-y-12">
+          <div className="flex flex-col gap-y-4 text-center">
+            <h2>Feeling Stuck? We’re Here to Help.</h2>
+            <p className="text-lg">
+              Life can feel overwhelming at times, but you don’t have to face it
+              alone. Let us guide you
+              <br />
+              to clarity and strength.
+            </p>
+          </div>
+          <div className="w-full grid grid-cols-3 gap-x-6">
+            {solutions.map((solution) => {
+              return (
+                <div
+                  key={solution.image}
+                  className="flex flex-col items-center gap-y-4 p-10 rounded-lg bg-muted text-muted-foreground"
+                >
+                  <Image
+                    src={solution.image}
+                    alt="maze-icon"
+                    width={96}
+                    height={96}
+                  />
+                  <p>{solution.heading}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex justify-center">
+            <Button>Talk to Us</Button>
+          </div>
+        </div>
+      </InViewAnimateSection>
+      <InViewAnimateSection
+        id="features"
+        className="!h-full flex justify-center py-24"
+      >
+        <div className="my-auto flex flex-col gap-y-15 w-full">
+          <div className="flex flex-col gap-y-4 text-center">
+            <h2>Why Choose BeyondFaith?</h2>
+            <p>
+              Life can feel overwhelming at times, but you don’t have to face it
+              alone. Let us guide you
+              <br />
+              to clarity and strength.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 laptop:grid-cols-4 gap-4 w-full">
+            {features.map((feature, id) => {
+              return (
+                <div
+                  key={feature.heading}
+                  className={cj("w-full rounded-lg p-8", {
+                    "bg-primary": id === 0,
+                    "bg-secondary": id === 1,
+                    "bg-tertiary": id === 2,
+                    "bg-quaternary": id === 3,
+                  })}
+                >
+                  <Image
+                    src={feature.image}
+                    alt={feature.heading}
+                    width={96}
+                    height={96}
+                  />
+                  <div className="mt-15 text-accent">
+                    <h4 className="font-bold">{feature.heading}</h4>
+                    <p className="text-sm">{feature.description}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </InViewAnimateSection>
+      <InViewAnimateSection
+        id="founder"
+        className="!h-full flex justify-between py-24 bg-muted overflow-clip"
+      >
+        <div className="w-full my-auto grid grid-cols-[1fr_minmax(360,1fr)] laptop:grid-cols-[1fr_minmax(560,_1fr)] items-center gap-x-10 laptop:gap-x-55">
+          <div className="relative">
+            <div className="max-h-[calc(100vh-200px)] aspect-[41/56] relative">
+              <Image src="/images/founder.png" alt="founder-image" fill />
+            </div>
+            <div className="absolute -top-8 -left-8">
+              <Image
+                src="/images/Stars.svg"
+                width={48}
+                height={48}
+                alt="stars-decoration"
+              />
+            </div>
+          </div>
+          <div className="w-full flex flex-col h-fit gap-y-6 relative">
+            <div className="w-fit relative">
+              <div className="absolute -top-8 -right-8 -rotate-120">
+                <Image
+                  src="/images/Stars.svg"
+                  width={48}
+                  height={48}
+                  alt="stars-decoration"
+                />
+              </div>
+              <h3 className="text-4xl font-dm w-fit">
+                A Message from Our Founder
+              </h3>
+            </div>
+            <p className="text-lg">
+              Your journey is yours alone. But it’s not a game of luck, it’s a
+              testament to the strength that already exists within you.
+            </p>
+            <p className="text-lg">
+              Faith isn’t just about belief; it’s about trust—trusting yourself,
+              your story, and the process of growth.
+            </p>
+            <p className="text-lg">
+              At BeyondFaith, we help you embrace this journey. Our team
+              supports you, helping you uncover your strength and face
+              challenges with confidence.
+            </p>
+          </div>
+        </div>
+      </InViewAnimateSection>
+      <InViewAnimateSection
+        id="faq"
+        className="!h-full flex justify-between py-24 overflow-clip"
+      >
+        <div className="w-full grid grid-cols-2 my-auto">
+          <h3 className="text-4xl font-dm">Frequently Asked Questions</h3>
+          <div>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq) => (
+                <AccordionItem key={faq.question} value={faq.question}>
+                  <AccordionTrigger>{faq.question}</AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance">
+                    <p>{faq.content}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            <Button variant="link" className="!px-0 py-5">
+              View More FAQ <ChevronRight />
+            </Button>
+          </div>
+        </div>
+      </InViewAnimateSection>
+      <section className="w-full min-h-fit py-24 flex gap-y-6 justify-center relative">
+        <Image 
+          src="/images/galaxy.png"
+          alt='galaxy-background'
+          fill
+          className="-z-10 inset-0"
+        />
+        <div className="flex flex-col items-center text-accent gap-y-6 max-w-200">
+        <div className="flex flex-col gap-y-3 text-center">
+          <h3 className="text-4xl font-dm">Ready to Begin Your Journey?</h3>
+          <p className="text-center text-lg opacity-60">
+            Take the first step toward healing and growth with BeyondFaith.
+            We’re here to support you every step of the way.
+          </p>
+        </div>
+        <Button variant="accent" className="w-fit">
+          Book Your Appointment
+        </Button>
+        </div>
+      </section>
+    </>
   );
 }
