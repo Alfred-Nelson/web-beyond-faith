@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="flex justify-between items-center px-[var(--gutter-width)] py-6">
       <h2 className="text-lg font-dm">BeyondFaith</h2>
-      <div className="flex items-center gap-x-12">
+      <div className="flex items-center gap-x-6 tablet:gap-x-12">
         <Link href="#">
           <Image
             src="/images/instagram.svg"

@@ -29,7 +29,7 @@ const features = [
   {
     image: "/images/hands.svg",
     heading: "Qualified Team",
-    description: "Therapists who prioritize yourmental health.",
+    description: "Therapists who prioritize your mental health.",
   },
   {
     image: "/images/checklist.svg",
@@ -55,12 +55,12 @@ const faqs = [
       "You can schedule a session by visiting our booking page, selecting your preferred date and time, and confirming your appointment. If you need assistance, feel free to contact us.",
   },
   {
-    question: "Is there any Free Trial Session ?",
+    question: "Is there any Free Trial Session?",
     content:
       "You can schedule a session by visiting our booking page, selecting your preferred date and time, and confirming your appointment. If you need assistance, feel free to contact us.",
   },
   {
-    question: "Do you do In-Person Therapy ?",
+    question: "Do you do In-Person Therapy?",
     content:
       "You can schedule a session by visiting our booking page, selecting your preferred date and time, and confirming your appointment. If you need assistance, feel free to contact us.",
   },
@@ -92,17 +92,11 @@ export default function Home() {
             className="h-full object-cover"
           />
         </div>
-        <div className="flex flex-col items-center my-auto gap-y-6 text-accent">
-          <h1>
-            BeyondFaith, Your Journey
-            <br />
-            to Inner Strength
-          </h1>
-          <p className="font-inter text-2xl text-center font-light">
+        <div className="flex flex-col items-center my-auto gap-y-6 text-accent max-w-178">
+          <h1>BeyondFaith, Your Journey to Inner Strength</h1>
+          <p className="font-inter text-xl tablet:text-2xl text-center font-light">
             Rediscover your potential with therapists who guide you toward a
-            more
-            <br />
-            peaceful you—grounded in faith.
+            more peaceful you—grounded in faith.
           </p>
           <Button variant="accent" className="w-fit">
             Start Your Journey
@@ -113,17 +107,15 @@ export default function Home() {
         id="services"
         className="!h-full flex justify-center py-24 border-b border-foreground/5"
       >
-        <div className="my-auto flex flex-col gap-y-12">
+        <div className="my-auto flex flex-col items-center gap-y-12">
           <div className="flex flex-col gap-y-4 text-center">
             <h2>Feeling Stuck? We’re Here to Help.</h2>
-            <p className="text-lg">
+            <p className="text-center max-w-134">
               Life can feel overwhelming at times, but you don’t have to face it
-              alone. Let us guide you
-              <br />
-              to clarity and strength.
+              alone. Let us guide you to clarity and strength.
             </p>
           </div>
-          <div className="w-full grid grid-cols-3 gap-x-6">
+          <div className="w-full grid grid-cols-1 tablet:grid-cols-3 gap-6">
             {solutions.map((solution) => {
               return (
                 <div
@@ -160,7 +152,7 @@ export default function Home() {
               to clarity and strength.
             </p>
           </div>
-          <div className="grid grid-cols-2 laptop:grid-cols-4 gap-4 w-full">
+          <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-4 w-full">
             {features.map((feature, id) => {
               return (
                 <div
@@ -192,22 +184,22 @@ export default function Home() {
         id="founder"
         className="!h-full flex justify-between py-24 bg-muted overflow-clip"
       >
-        <div className="w-full my-auto grid grid-cols-[1fr_minmax(360,1fr)] laptop:grid-cols-[1fr_minmax(560,_1fr)] items-center gap-x-10 laptop:gap-x-55">
+        <div className="w-full my-auto grid grid-cols-1 tablet:grid-cols-[1fr_minmax(360,1fr)] laptop:grid-cols-[1fr_minmax(560,_1fr)] items-center gap-x-10 laptop:gap-x-55">
           <div className="relative">
-            <div className="max-h-[calc(100vh-200px)] aspect-[41/56] relative">
+            <div className="w-full min-[500px]:w-[30%] mx-auto tablet:w-auto tablet:max-h-[calc(100vh-200px)] aspect-[41/56] relative">
               <Image src="/images/founder.png" alt="founder-image" fill />
-            </div>
-            <div className="absolute -top-8 -left-8">
-              <Image
-                src="/images/Stars.svg"
-                width={48}
-                height={48}
-                alt="stars-decoration"
-              />
+              <div className="absolute -top-8 -left-8">
+                <Image
+                  src="/images/Stars.svg"
+                  width={48}
+                  height={48}
+                  alt="stars-decoration"
+                />
+              </div>
             </div>
           </div>
-          <div className="w-full flex flex-col h-fit gap-y-6 relative">
-            <div className="w-fit relative">
+          <div className="w-full flex flex-col h-fit gap-y-6 relative text-center mt-14 tablet:mt-0">
+            <div className="w-fit relative mx-auto">
               <div className="absolute -top-8 -right-8 -rotate-120">
                 <Image
                   src="/images/Stars.svg"
@@ -240,8 +232,8 @@ export default function Home() {
         id="faq"
         className="!h-full flex justify-between py-24 overflow-clip"
       >
-        <div className="w-full grid grid-cols-2 my-auto">
-          <h3 className="text-4xl font-dm">Frequently Asked Questions</h3>
+        <div className="w-full grid grid-cols-1 gap-y-6 tablet:grid-cols-2 my-auto">
+          <h3 className="text-4xl font-dm text-center tablet:text-left">Frequently Asked Questions</h3>
           <div>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq) => (
@@ -260,23 +252,23 @@ export default function Home() {
         </div>
       </InViewAnimateSection>
       <section className="w-full min-h-fit py-24 flex gap-y-6 justify-center relative">
-        <Image 
+        <Image
           src="/images/galaxy.png"
-          alt='galaxy-background'
+          alt="galaxy-background"
           fill
           className="-z-10 inset-0"
         />
         <div className="flex flex-col items-center text-accent gap-y-6 max-w-200">
-        <div className="flex flex-col gap-y-3 text-center">
-          <h3 className="text-4xl font-dm">Ready to Begin Your Journey?</h3>
-          <p className="text-center text-lg opacity-60">
-            Take the first step toward healing and growth with BeyondFaith.
-            We’re here to support you every step of the way.
-          </p>
-        </div>
-        <Button variant="accent" className="w-fit">
-          Book Your Appointment
-        </Button>
+          <div className="flex flex-col gap-y-3 text-center">
+            <h3 className="text-4xl font-dm">Ready to Begin Your Journey?</h3>
+            <p className="text-center text-lg opacity-60">
+              Take the first step toward healing and growth with BeyondFaith.
+              We’re here to support you every step of the way.
+            </p>
+          </div>
+          <Button variant="accent" className="w-fit">
+            Book Your Appointment
+          </Button>
         </div>
       </section>
     </>

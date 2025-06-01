@@ -8,13 +8,15 @@ const Header = () => {
       <Link href={"/#home"}>
         <span className="font-dm text-lg">BeyondFaith</span>
       </Link>
-      <nav className="flex items-center gap-x-10 font-inter text-sm">
+      <nav className="hidden tablet:flex items-center gap-x-10 font-inter text-sm">
         <Link href="/#home">Home</Link>
         <Link href="/#services">Services</Link>
         <Link href="/#faq">FAQ</Link>
         <Link href="/#shop">Shop</Link>
       </nav>
-      <Button variant="outline">Talk to Us</Button>
+      <Button variant="outline" className="hidden tablet:flex">
+        Talk to Us
+      </Button>
     </header>
   );
 };
